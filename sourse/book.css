@@ -1,0 +1,336 @@
+* {
+margin:0;
+padding:0
+}
+
+.book {
+display:block;
+position:relative;
+-webkit-transform-style:preserve-3d;
+-moz-transform-style:preserve-3d;
+-o-transform-style:preserve-3d;
+-ms-transform-style:preserve-3d;
+transform-style:preserve-3d;
+}
+
+.book .book-page {
+position:absolute;
+top:0;
+left:0;
+bottom:0;
+right:0
+}
+
+.book .book-prev-staticPage {
+position:absolute;
+top:0;
+left:50%;
+bottom:0;
+right:0;
+overflow:hidden;
+}
+
+.book .book-prev-staticPage-inner {
+position:absolute;
+top:0;
+left:-100%;
+bottom:0;
+right:0;
+overflow:hidden;
+}
+
+.book .book-prev-frontPage {
+position:absolute;
+top:0;
+left:0;
+bottom:0;
+right:50%;
+overflow:hidden;
+-webkit-transform-origin:right center;
+-moz-transform-origin:right center;
+-o-transform-origin:right center;
+-ms-transform-origin:right center;
+transform-origin:right center;
+
+-webkit-transition:-webkit-transform .3s linear;
+-moz-transition:-moz-transform .3s linear;
+-o-transition:-o-transform .3s linear;
+-ms-transition:-ms-transform .3s linear;
+transition:transform .3s linear;
+
+-webkit-transform:perspective(3000px);
+-moz-transform:perspective(3000px);
+-o-transform:perspective(3000px);
+-ms-transform:perspective(3000px);
+transform:perspective(3000px);
+}
+
+.book .book-prev-frontPage .shadow{
+content:' ';
+display:block;
+position:absolute;
+top:0;
+left:0;
+bottom:0;
+right:0;
+background-image: -webkit-linear-gradient(right, rgba(0,0,0,0.8)0%,rgba(0,0,0,0)50%);
+background-image: -moz-linear-gradient(right, rgba(0,0,0,0.8)0%,rgba(0,0,0,0)50%);
+background-image: -o-linear-gradient(right, rgba(0,0,0,0.8)0%,rgba(0,0,0,0)50%);
+background-image: -ms-linear-gradient(right, rgba(0,0,0,0.8)0%,rgba(0,0,0,0)50%);
+background-image: linear-gradient(right, rgba(0,0,0,0.8)0%,rgba(0,0,0,0)50%);
+
+-webkit-transition: opacity .3s linear;
+-moz-transition: opacity .3s linear;
+-o-transition: opacity .3s linear;
+-ms-transition: opacity .3s linear;
+transition: opacity .3s linear;
+
+opacity:0;
+}
+
+.book .book-prev-frontPage-inner {
+position:absolute;
+top:0;
+left:0;
+bottom:0;
+right:-100%;
+overflow:hidden;
+}
+
+.book .book-prev-backPage {
+position:absolute;
+top:0;
+left:50%;
+bottom:0;
+right:0;
+overflow:hidden;
+-webkit-transform-origin:left center;
+-moz-transform-origin:left center;
+-o-transform-origin:left center;
+-ms-transform-origin:left center;
+transform-origin:left center;
+
+-webkit-transition:-webkit-transform .3s linear;
+-moz-transition:-moz-transform .3s linear;
+-o-transition:-o-transform .3s linear;
+-ms-transition:-ms-transform .3s linear;
+transition:transform .3s linear;
+
+-webkit-transform:perspective(3000px) rotateY(-90deg);
+-moz-transform:perspective(3000px) rotateY(-90deg);
+-o-transform:perspective(3000px) rotateY(-90deg);
+-ms-transform:perspective(3000px) rotateY(-90deg);
+transform:perspective(3000px) rotateY(-90deg);
+}
+
+.book .book-prev-backPage .shadow{
+content:' ';
+display:block;
+position:absolute;
+top:0;
+left:0;
+bottom:0;
+right:0;
+background-image: -webkit-linear-gradient(left, rgba(0,0,0,0.8)0%,rgba(0,0,0,0)50%);
+background-image: -moz-linear-gradient(left, rgba(0,0,0,0.8)0%,rgba(0,0,0,0)50%);
+background-image: -o-linear-gradient(left, rgba(0,0,0,0.8)0%,rgba(0,0,0,0)50%);
+background-image: -ms-linear-gradient(left, rgba(0,0,0,0.8)0%,rgba(0,0,0,0)50%);
+background-image: linear-gradient(left, rgba(0,0,0,0.8)0%,rgba(0,0,0,0)50%);
+-webkit-transition: opacity .3s linear;
+-moz-transition: opacity .3s linear;
+-o-transition: opacity .3s linear;
+-ms-transition: opacity .3s linear;
+transition: opacity .3s linear;
+opacity:1;
+}
+
+.book .book-prev-backPage-inner {
+position:absolute;
+top:0;
+left:-100%;
+bottom:0;
+right:0;
+overflow:hidden;
+}
+
+.book .book-prev-ani-step2 {
+-webkit-transform:perspective(3000px) rotateY(0deg);
+-moz-transform:perspective(3000px) rotateY(0deg);
+-o-transform:perspective(3000px) rotateY(0deg);
+-ms-transform:perspective(3000px) rotateY(0deg);
+transform:perspective(3000px) rotateY(0deg);
+}
+
+.book .book-prev-ani-step2 .shadow{
+opacity:0
+}
+
+.book .book-prev-ani-step1 {
+-webkit-transform:perspective(3000px) rotateY(90deg);
+-moz-transform:perspective(3000px) rotateY(90deg);
+-o-transform:perspective(3000px) rotateY(90deg);
+-ms-transform:perspective(3000px) rotateY(90deg);
+transform:perspective(3000px) rotateY(90deg);
+}
+
+.book .book-prev-ani-step1 .shadow{
+opacity:1
+}
+
+
+
+.book .book-next-staticPage {
+position:absolute;
+top:0;
+left:0;
+bottom:0;
+right:50%;
+overflow:hidden;
+}
+
+.book .book-next-staticPage-inner {
+position:absolute;
+top:0;
+left:0;
+bottom:0;
+right:-100%;
+overflow:hidden;
+}
+
+.book .book-next-frontPage {
+position:absolute;
+top:0;
+left:50%;
+bottom:0;
+right:0;
+overflow:hidden;
+-webkit-transform-origin:left center;
+-moz-transform-origin:left center;
+-o-transform-origin:left center;
+-ms-transform-origin:left center;
+transform-origin:left center;
+-webkit-transition:-webkit-transform .3s linear;
+-moz-transition:-moz-transform .3s linear;
+-o-transition:-o-transform .3s linear;
+-ms-transition:-ms-transform .3s linear;
+transition:transform .3s linear;
+-webkit-transform:perspective(3000px);
+-moz-transform:perspective(3000px);
+-o-transform:perspective(3000px);
+-ms-transform:perspective(3000px);
+transform:perspective(3000px);
+}
+
+.book .book-next-frontPage .shadow{
+content:' ';
+display:block;
+position:absolute;
+top:0;
+left:0;
+bottom:0;
+right:0;
+background-image: -webkit-linear-gradient(left, rgba(0,0,0,0.8)0%,rgba(0,0,0,0)50%);
+background-image: -moz-linear-gradient(left, rgba(0,0,0,0.8)0%,rgba(0,0,0,0)50%);
+background-image: -o-linear-gradient(left, rgba(0,0,0,0.8)0%,rgba(0,0,0,0)50%);
+background-image: -ms-linear-gradient(left, rgba(0,0,0,0.8)0%,rgba(0,0,0,0)50%);
+background-image: linear-gradient(left, rgba(0,0,0,0.8)0%,rgba(0,0,0,0)50%);
+
+-webkit-transition: opacity .3s linear;
+-moz-transition: opacity .3s linear;
+-o-transition: opacity .3s linear;
+-ms-transition: opacity .3s linear;
+transition: opacity .3s linear;
+
+opacity:0;
+}
+
+.book .book-next-frontPage-inner {
+position:absolute;
+top:0;
+left:-100%;
+bottom:0;
+right:0;
+overflow:hidden;
+}
+
+.book .book-next-backPage {
+position:absolute;
+top:0;
+left:0;
+bottom:0;
+right:50%;
+overflow:hidden;
+-webkit-transform-origin:right center;
+-moz-transform-origin:right center;
+-o-transform-origin:right center;
+-ms-transform-origin:right center;
+transform-origin:right center;
+
+-webkit-transition:-webkit-transform .3s linear;
+-moz-transition:-moz-transform .3s linear;
+-o-transition:-o-transform .3s linear;
+-ms-transition:-ms-transform .3s linear;
+transition:transform .3s linear;
+
+-webkit-transform:perspective(3000px) rotateY(90deg);
+-moz-transform:perspective(3000px) rotateY(90deg);
+-o-transform:perspective(3000px) rotateY(90deg);
+-ms-transform:perspective(3000px) rotateY(90deg);
+transform:perspective(3000px) rotateY(90deg);
+}
+
+.book .book-next-backPage .shadow{
+content:' ';
+display:block;
+position:absolute;
+top:0;
+left:0;
+bottom:0;
+right:0;
+background-image: -webkit-linear-gradient(right, rgba(0,0,0,0.8)0%,rgba(0,0,0,0)50%);
+background-image: -moz-linear-gradient(right, rgba(0,0,0,0.8)0%,rgba(0,0,0,0)50%);
+background-image: -o-linear-gradient(right, rgba(0,0,0,0.8)0%,rgba(0,0,0,0)50%);
+background-image: -ms-linear-gradient(right, rgba(0,0,0,0.8)0%,rgba(0,0,0,0)50%);
+background-image: linear-gradient(right, rgba(0,0,0,0.8)0%,rgba(0,0,0,0)50%);
+
+-webkit-transition: opacity .3s linear;
+-moz-transition: opacity .3s linear;
+-o-transition: opacity .3s linear;
+-ms-transition: opacity .3s linear;
+transition: opacity .3s linear;
+
+opacity:1;
+}
+
+.book .book-next-backPage-inner {
+position:absolute;
+top:0;
+left:0;
+bottom:0;
+right:-100%;
+overflow:hidden;
+}
+
+.book .book-next-ani-step2 {
+-webkit-transform:perspective(3000px) rotateY(0deg);
+-moz-transform:perspective(3000px) rotateY(0deg);
+-o-transform:perspective(3000px) rotateY(0deg);
+-ms-transform:perspective(3000px) rotateY(0deg);
+transform:perspective(3000px) rotateY(0deg);
+}
+
+.book .book-next-ani-step2 .shadow{
+opacity:0
+}
+
+.book .book-next-ani-step1 {
+-webkit-transform:perspective(3000px) rotateY(-90deg);
+-moz-transform:perspective(3000px) rotateY(-90deg);
+-o-transform:perspective(3000px) rotateY(-90deg);
+-ms-transform:perspective(3000px) rotateY(-90deg);
+transform:perspective(3000px) rotateY(-90deg);
+}
+
+.book .book-next-ani-step1 .shadow{
+opacity:1
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>book.js</title>
+	<link rel="stylesheet" type="text/css" href="../sourse/book.css" media="all">
+	<style type="text/css" media="screen">
+		img{
+			width:576px;
+			height:360px;
+		}
+		.book{
+			box-shadow: 1px 1px 3px #333;
+			margin:30px;
+		}
+	</style>
+</head>
+<body>
+	<div class="book" id="book">
+		<div class="book-page">
+			<img src="image/0.jpg" alt="">
+		</div>
+		<div class="book-page">
+			<img src="image/1.jpg" alt="">
+		</div>
+		<div class="book-page">
+			<img src="image/2.jpg" alt="">
+		</div>
+		<div class="book-page">
+			<img src="image/3.jpg" alt="">
+		</div>
+		<div class="book-page">
+			<img src="image/4.jpg" alt="">
+		</div>
+		<div class="book-page">
+			<img src="image/5.jpg" alt="">
+		</div>
+		<div class="book-page">
+			<img src="image/6.jpg" alt="">
+		</div>
+		<div class="book-page">
+			<img src="image/7.jpg" alt="">
+		</div>
+	</div>
+	<script type="text/javascript" src="../sourse/book.js"></script>
+	<script type="text/javascript">
+		var aBook = book('book',{
+			 width:576
+			,height: 360
+			,bookmark: 2
+		})
+		// 初始化
+		//第一个参数为id字符串或者node结构
+		//第二个值是参数。
+		//  width ,height初始化大小 也可以不写自己用样式在定也可以
+		//  bookmark 初始化定位在第几页
+		//  
+		// 方法
+		// aBook.prev()    上一页
+		// aBook.next()    下一页
+		// aBook.turnTo(n) 翻到第n页
+ 	</script>
+	<div>
+		<b onclick="aBook.prev()">prev</b>
+		<b onclick="aBook.next()">next</b>
+	</div>
+</body>
+</html>
