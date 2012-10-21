@@ -1,17 +1,58 @@
 <!DOCTYPE HTML>
-<html lang="en-US">
+<html lang="zh-CN">
 <head>
 	<meta charset="UTF-8">
 	<title>book.js</title>
 	<link rel="stylesheet" type="text/css" href="../sourse/book.css" media="all">
 	<style type="text/css" media="screen">
+		*{
+			margin:0;
+			padding:0;
+		}
+		body{
+			background: #eee;
+			font-family: arial, sans-serif;
+			-webkit-user-select:none;
+			-moz-user-select:none;
+			-o-user-select:none;
+			user-select:none;
+		}
 		img{
 			width:576px;
 			height:360px;
-		}
+		}		
 		.book{
-			box-shadow: 1px 1px 3px #333;
+			box-shadow: 1px 1px 3px #000;
 			margin:30px;
+		}
+		.btns{
+			width:576px;
+			margin:30px;
+			text-align:center;
+		}
+		.btns b{
+			padding:5px 10px;
+			background:-webkit-linear-gradient(top,#eee,#ddd);
+			background:-moz-linear-gradient(top,#eee,#ddd);
+			background:-o-linear-gradient(top,#eee,#ddd);
+			background:-ms-linear-gradient(top,#eee,#ddd);
+			background:linear-gradient(top,#eee,#ddd);
+			border-radius: 2px;
+			box-shadow: 0 0 2px #000;
+			cursor:pointer;
+			color:#666;
+			margin:0 40px;
+		}
+		.btns b:hover{
+			box-shadow: 0 0 2px #000;color:#444;
+		}
+		.btns b:active{
+			background:-webkit-linear-gradient(bottom,#eee,#ddd);
+			background:-moz-linear-gradient(bottom,#eee,#ddd);
+			background:-o-linear-gradient(bottom,#eee,#ddd);
+			background:-ms-linear-gradient(bottom,#eee,#ddd);
+			background:linear-gradient(bottom,#eee,#ddd);
+			box-shadow: 0 0 2px #000 inset;
 		}
 	</style>
 </head>
@@ -60,9 +101,9 @@
 		// aBook.next()    下一页
 		// aBook.turnTo(n) 翻到第n页
  	</script>
-	<div>
-		<b onclick="aBook.prev()">prev</b>
-		<b onclick="aBook.next()">next</b>
+	<div class="btns">
+		<b onclick="aBook.prev()">prev | 上一页</b>
+		<b onclick="aBook.next()">next | 下一页</b>
 	</div>
 </body>
 </html>
